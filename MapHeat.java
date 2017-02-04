@@ -1,9 +1,10 @@
-import java.awt.image.BufferedImage
+import java.awt.image.BufferedImage;
+import java.awt.Color;
 
 
 public class MapHeat {
 
-    public static int [] differences(BufferedImage image_p, RGB [] expected_p) {
+    public static int [] differences(BufferedImage image_p, Color [] expected_p) {
         int height = image_p.getHeight();
 	int width = image_p.getWidth();
 	
@@ -11,14 +12,13 @@ public class MapHeat {
 
         for(int i = 0 ; i < height ; i++) {
 	    for(int j = 0 ; j < width ; i++) {
-	        RGB color{image_p.getRGB(j,i)}
-		
-		heats[j][i] = color_diff(color, expected_p);
+	        Color c{image_p.getRGB(j,i)}
+		heats[j][i] = color_diff(c, expected_p);
 	    } // end for(j)
 	} // end for(i)
     }
 
-    public static void heatmap(BufferedImage image_p, RGB [] expected_p) {
+    public static void heatmap(BufferedImage image_p, Color [] expected_p) {
         int height = image_p.getHeight();
 	int width = image_p.getWidth();
 
@@ -35,7 +35,7 @@ public class MapHeat {
 	return heatimg;
     }
 
-    private color_diff(RGB color1_p, RGB colors_p) {
+    private int color_diff(Color color1_p, Color colors_p) {
         return 0;
 	//TODO
     }
