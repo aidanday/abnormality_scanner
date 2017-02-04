@@ -7,7 +7,7 @@ public class IOImage extends Component {
 
     public static BufferedImage load_image(String name_p) {
        try {
-           return ImageIO.read(new File(name));
+           return ImageIO.read(new File(name_p));
        } catch (IOException e) {
        }
 
