@@ -7,14 +7,14 @@ public class AbnormalityScan
 {
     public static void main(String[] args)
     {
-        String name = ;
-        BufferedImage image = IOImage.getImage(name); //scan PNG to image
+        String name = args[0];
+        BufferedImage image = IOImage.load_image(name); //scan PNG to image
 
 	Color [] expected; // TODO get expected RGBs
 
         BufferedImage heatmap = MapHeat.heatmap(image, expected);
 
         final String prefix = "processed_";
-	IOImage.saveImage(heatmap, prefix + name); // save PNG of heatmap
+	IOImage.save_image(heatmap, prefix + name); // save PNG of heatmap
     }
 }
