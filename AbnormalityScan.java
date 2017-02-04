@@ -14,7 +14,7 @@ public class AbnormalityScan
 
         BufferedImage heatmap = MapHeat.heatmap(image, expected);
 
-        final String prefix = "abnormal_";
+        final String prefix = "processed_";
 	IOImage.saveImage(heatmap, prefix + name); // save PNG of heatmap
     }
 }
