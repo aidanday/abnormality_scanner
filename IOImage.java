@@ -12,5 +12,12 @@ public class IOImage {
     }
     
     public static void save_image(BufferedImage image_p, String name_p) {
+        final String format = "png";
+
+	try {
+	    File outputfile = new File(name_p);
+	    ImageIO.write(image_p, format, outputfile);
+	} catch (IOException e) {
+	}
     }
 }
