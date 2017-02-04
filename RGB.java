@@ -1,9 +1,9 @@
 
 public class RGB {
 
-    private int r;
-    private int b;
-    private int g;
+    private int r_i;
+    private int b_i;
+    private int g_i;
 
     public int to_int() {
         return 0;
@@ -11,9 +11,9 @@ public class RGB {
     }
 
     RGB(int r_p, int g_p, int b_p) {
-        this.r = r_p;
-	this.g = g_p;
-	this.b = b_p;
+        this.r_i = r_p;
+	this.g_i = g_p;
+	this.b_i = b_p;
     }
 
     RGB(int rbg_p) {

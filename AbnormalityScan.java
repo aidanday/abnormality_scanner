@@ -1,6 +1,8 @@
-import java.awt.image.BufferedImage
-import MapHeat
-import RGB
+import java.awt.image.BufferedImage;
+import javax.imageio.*;
+
+import MapHeat;
+import RGB;
 
 
 public class AbnormalityScan
@@ -8,11 +10,21 @@ public class AbnormalityScan
 
     public static void main(String[] args)
     {
-        BufferedImage image; //scan PNG to image
-        RGB [] expected;
+        String name; // TODO get name
+
+        BufferedImage image = getImage(name); //scan PNG to image
+
+        RGB [] expected; // TODO get expected RGBs
         
         BufferedImage heatmap = MapHeat.heatmap(image, expected);
 
-        //output image to PNG
+        saveImage(heatmap, name); // save PNG of heatmap
+    }
+
+    private static BufferedImage getImage(String name_p) {
+        return ImageIO.read(new File(name_p));
+    }
+
+    private static void saveImage(BufferedImage image_p, String name_p) {
     }
 }

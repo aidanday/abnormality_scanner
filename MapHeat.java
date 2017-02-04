@@ -24,7 +24,7 @@ public class MapHeat {
 
 	int heats [width][height] = differences(image_p, expected_p);
 
-	BufferedImage heatimg{width, height, BufferedImage.TYPE_INT_RGB};
+	BufferedImage heatimg{width, height, BufferedImage.TYPE_INT_ARGB};
 
 	for(int i = 0 ; i < height ; i++) {
 	    for(int j = 0 ; j < width ; j++) {
