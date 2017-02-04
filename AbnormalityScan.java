@@ -7,7 +7,7 @@ public class AbnormalityScan
 {
     public static void main(String[] args)
     {
-        String name; // TODO get name
+        String name = ;
         BufferedImage image = IOImage.getImage(name); //scan PNG to image
 
 	Color [] expected; // TODO get expected RGBs
