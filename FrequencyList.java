@@ -19,7 +19,39 @@ class FrequencyList {
         }
 
         public void insert(Color c_p, int threshold_p) {
-            // TODO
+            if (threshold_p < (color_diff(c_p, this.c_i) >> 16)) {
+                if (null == next_i) {
+                    next_i = new Node(c_p, null, this);
+		    return
+                }
+                return next_i.insert(c_p, threshold_p);
+            }
+
+            freq_i++;
+            int r_new = (c_i.getRed() * (freq_i - 1) + c_p.getRed()) / freq_i;
+            int g_new = (c_i.getGreen() * (freq_i - 1) + c_p.getGreen()) / freq_i;
+            int b_new = (c_i.getBlue() * (freq_i - 1) + c_p.getBlue()) / freq_i;
+            this.c_i = new Color(r_new, g_new, b_new);
+
+            while ((null != prev_i) && (prev_i.freq_i < freq_i)) {
+                this.swap(prev_i);
+            } // end while(prev_i.freq_i < freq_i)
+        }
+
+        private void swap_adjacent() {
+            Node other = this.prev_i;
+            assert((null != other);
+
+            Node temp = this.next_i;
+            if (null != temp) temp.prev_i = other;
+	    temp = other.prev_i;
+            if (null != temp) temp.next_i = this;
+
+            this.prev_i = other.prev_i;
+            other.next_i = this.next_i;
+
+            this.next_i = other;
+            other.prev_i = this;
         }
     }
 
