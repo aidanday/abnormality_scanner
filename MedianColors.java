@@ -4,16 +4,15 @@ import java.awt.image.BufferedImage;
 import java.awt.Color;
 
 class MedianColors {
-    public static Color [] find(BufferedImage image_p, int num_expected_p) {
+    public static Color [] find(BufferedImage image_p, int num_expected_p, int threshold_p) {
         int height = image_p.getHeight();
         int width = image_p.getWidth();
-        final int threshold = 15;
 
         FrequencyList fl = new FrequencyList();
 
         for(int i = 0 ; i < height ; i++) {
             for(int j = 0 ; j < width ; j++) {
-                fl.insert(new Color(image_p.getRGB(j,i)), threshold);
+                fl.insert(new Color(image_p.getRGB(j,i)), threshold_p);
             } // end for(j)
         } // end for(i)
 

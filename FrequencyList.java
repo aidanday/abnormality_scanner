@@ -29,10 +29,6 @@ class FrequencyList {
             }
 
             freq_i++;
-            int r_new = (c_i.getRed() * (freq_i - 1) + c_p.getRed()) / freq_i;
-            int g_new = (c_i.getGreen() * (freq_i - 1) + c_p.getGreen()) / freq_i;
-            int b_new = (c_i.getBlue() * (freq_i - 1) + c_p.getBlue()) / freq_i;
-            this.c_i = new Color(r_new, g_new, b_new);
 
             while ((null != prev_i) && (prev_i.freq_i < freq_i)) {
                 Node other = this.prev_i;
