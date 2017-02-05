@@ -10,7 +10,7 @@ public class AbnormalityScan
         String name = args[0];
         BufferedImage image = IOImage.load_image(name);
 
-	final int num_colors = 5;
+	final int num_expected = 5;
 	Color [] expected = MedianColors.find(image, num_colors);
 
         BufferedImage heatmap = MapHeat.heatmap(image, expected);
