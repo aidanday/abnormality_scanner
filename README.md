@@ -3,3 +3,6 @@ Computer vision that takes a PNG and a list of expected colors. Makes a heatmap 
 
 ## Arguments
 The scanner accepts the file name of the image to be scanned as a parameter.
+
+## Other Info
+This project was made for uWaterloo's EngHack17 by [Aidan Day](github.com/aidanday) and [Marcin Rachwal](github.com/MarcinZR). It uses Java because we are both proficient in it. Thanks for your interest!
