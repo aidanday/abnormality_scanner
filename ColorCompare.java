@@ -15,7 +15,8 @@ public class ColorCompare {
 	if (current < 0) current = -current;
 	total += current;
 	total /= 3;
-	return total;
+	int rgb diff = (total << 16) + (total << 8) + total;
+	return rgb_diff;
     }
 
     private int color_diff(Color color_p, Color [] colors_p) {
