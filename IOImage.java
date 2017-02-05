@@ -2,6 +2,8 @@ import java.awt.BufferedImage;
 import java.awt.image.*;
 import javax.imageio.*;
 
+package ;
+
 public class IOImage {
 
     public static BufferedImage load_image(String name_p) {

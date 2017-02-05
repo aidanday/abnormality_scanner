@@ -1,20 +1,21 @@
 import java.awt.image.BufferedImage;
 import java.awt.Color;
 
-import MapHeat;
+package ;
 
 public class AbnormalityScan
 {
     public static void main(String[] args)
     {
         String name = args[0];
-        BufferedImage image = IOImage.load_image(name); //scan PNG to image
+        BufferedImage image = IOImage.load_image(name);
 
-	Color [] expected; // TODO get expected RGBs
+	final int num_colors = 5;
+	Color [] expected = MedianColors.find(image, num_colors);
 
         BufferedImage heatmap = MapHeat.heatmap(image, expected);
 
         final String prefix = "processed_";
-	IOImage.save_image(heatmap, prefix + name); // save PNG of heatmap
+	IOImage.save_image(heatmap, prefix + name);
     }
 }

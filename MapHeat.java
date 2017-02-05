@@ -1,6 +1,7 @@
 import java.awt.image.BufferedImage;
 import java.awt.Color;
 
+package ;
 
 public class MapHeat {
 
