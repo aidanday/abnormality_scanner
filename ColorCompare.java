@@ -1,6 +1,6 @@
 import java.awt.Color;
-
 package ca.uwaterloo.enghack17.cvision;
+
 public class ColorCompare {
 
     private int color_diff(Color color1_p, Color color2_p) {
