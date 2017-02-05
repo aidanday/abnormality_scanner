@@ -35,25 +35,21 @@ class FrequencyList {
             this.c_i = new Color(r_new, g_new, b_new);
 
             while ((null != prev_i) && (prev_i.freq_i < freq_i)) {
-                this.swap_back();
+                Node other = this.prev_i;
+
+                Node temp = this.next_i;
+                if (null != temp) temp.prev_i = other;
+                temp = other.prev_i;
+                if (null != temp) temp.next_i = this;
+
+                this.prev_i = other.prev_i;
+                other.next_i = this.next_i;
+
+                this.next_i = other;
+                other.prev_i = this;
             } // end while(prev_i.freq_i < freq_i)
         }
 
-        private void swap_back() {
-            Node other = this.prev_i;
-            assert(null != other);
-
-            Node temp = this.next_i;
-            if (null != temp) temp.prev_i = other;
-	    temp = other.prev_i;
-            if (null != temp) temp.next_i = this;
-
-            this.prev_i = other.prev_i;
-            other.next_i = this.next_i;
-
-            this.next_i = other;
-            other.prev_i = this;
-        }
     }
 
     public void insert(Color c_p, int threshold_p) {

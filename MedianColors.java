@@ -20,8 +20,8 @@ class MedianColors {
         Color [] array = fl.head(num_expected_p);
         int length = 0;
 
-        for(int k = 0 ; k < num_expected_p ; k++) {
-            if (null != array[i]) length++;
+        for(int k = 0 ; k < array.length ; k++) {
+            if (null != array[k]) length++;
         } // end for(k)
 
         Color [] expected = new Color[length];
