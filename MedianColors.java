@@ -1,10 +1,10 @@
 import java.awk.image.BufferedImage;
-import java.awk.Color
+import java.awk.Color;
 
 package ca.uwaterloo.enghack17.cvision;
 
 public MedianColors {
-    public static Color [] find(BufferedImage, int) {
+    public static Color [] find(BufferedImage image_p, int num_colors_p) {
         //TODO
     }
 }
