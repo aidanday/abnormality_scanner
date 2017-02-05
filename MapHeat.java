@@ -11,8 +11,8 @@ public class MapHeat {
 	int heats [width][height];
 
         for(int i = 0 ; i < height ; i++) {
-	    for(int j = 0 ; j < width ; i++) {
-	        Color c{image_p.getRGB(j,i)}
+	    for(int j = 0 ; j < width ; j++) {
+	        Color c = image_p.getRGB(j,i);
 		heats[j][i] = color_diff(c, expected_p);
 	    } // end for(j)
 	} // end for(i)
