@@ -1,4 +1,5 @@
 import java.awt.Color;
+
 package ca.uwaterloo.enghack17.cvision;
 
 public class ColorCompare {
