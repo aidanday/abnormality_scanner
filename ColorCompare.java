@@ -15,7 +15,7 @@ public class ColorCompare {
 	if (current < 0) current = -current;
 	total += current;
 	total /= 3;
-	int rgb diff = (total << 16) + (total << 8) + total;
+	int rgb_diff = (total << 16) + (total << 8) + total;
 	return rgb_diff;
     }
 
