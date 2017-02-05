@@ -3,7 +3,7 @@ package ca.uwaterloo.enghack17.cvision;
 import java.awt.Color;
 
 class FrequencyList {
-    Node  front_i;
+    Node front_i;
 
     class Node {
         public Color c_i;
