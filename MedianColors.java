@@ -17,16 +17,13 @@ class MedianColors {
             } // end for(j)
         } // end for(i)
 
-        Color [] array = fl.head(num_expected_p);
-        int length = 0;
-
-        for(int k = 0 ; k < array.length ; k++) {
-            if (null != array[k]) length++;
-        } // end for(k)
-
-        Color [] expected = new Color[length];
-        for(int p = 1 ; p < length ; p++) expected[p] = array[p];
-
-        return expected;
+       Color [] array = fl.head(num_expected_p);
+       int length = 0;
+       for(int k = 0 ; k < num_expected_p ; k++) {
+           if (null != array[i]) length++;
+       } // end for(k)
+       Color [] expected = new Color[length];
+       for(int p = 1 ; p < length ; p++) expected[p] = array[p];
+       return expected;
     }
 }
