@@ -20,8 +20,7 @@ public class ColorCompare {
     }
 
     public static int color_diff(Color color_p, Color [] colors_p) {
-        int length = 0;
-	for(int k = 0 ; k < colors_p.length ; i++) length += (null != colors_p[k]);
+        int length = colors_p.length;
         int min_diff = color_diff(color_p, colors_p[0]);
         int temp;
 
