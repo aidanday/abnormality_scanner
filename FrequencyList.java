@@ -34,11 +34,11 @@ class FrequencyList {
             this.c_i = new Color(r_new, g_new, b_new);
 
             while ((null != prev_i) && (prev_i.freq_i < freq_i)) {
-                this.swap(prev_i);
+                this.swap_back();
             } // end while(prev_i.freq_i < freq_i)
         }
 
-        private void swap_adjacent() {
+        private void swap_back() {
             Node other = this.prev_i;
             assert((null != other);
 
