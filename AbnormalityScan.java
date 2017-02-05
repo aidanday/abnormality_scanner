@@ -12,9 +12,9 @@ public class AbnormalityScan
         assert null != image;
 
         int num_expected = 5;
-        if ((args.length > 1) && (null != args[1])) num_expected = args[1];
+        if ((args.length > 1) && (null != args[1])) num_expected = Integer.parseInt(args[1]);
         int threshold = 10;
-        if ((args.length > 2) && (null != args[2])) threshold = args[2];
+        if ((args.length > 2) && (null != args[2])) threshold = Integer.parseInt(args[2]);
         Color [] expected = MedianColors.find(image, num_expected, threshold);
 
         BufferedImage heatmap = MapHeat.heatmap(image, expected);
