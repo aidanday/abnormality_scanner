@@ -2,8 +2,7 @@ import java.awt.BufferedImage;
 import java.awt.image.*;
 import javax.imageio.*;
 
-package ;
-
+package ca.uwaterloo.enghack17.cvision;
 public class IOImage {
 
     public static BufferedImage load_image(String name_p) {

@@ -1,8 +1,7 @@
 import java.awt.image.BufferedImage;
 import java.awt.Color;
 
-package ;
-
+package ca.uwaterloo.enghack17.cvision;
 public class MapHeat {
 
     public static int [] differences(BufferedImage image_p, Color [] expected_p) {
