@@ -9,13 +9,14 @@ public class AbnormalityScan
     {
         String name = args[0];
         BufferedImage image = IOImage.load_image(name);
+        assert null != image;
 
-	    final int num_expected = 5;
-	    Color [] expected = MedianColors.find(image, num_expected);
+        final int num_expected = 5;
+        Color [] expected = MedianColors.find(image, num_expected);
 
         BufferedImage heatmap = MapHeat.heatmap(image, expected);
 
         final String prefix = "processed_";
-	    IOImage.save_image(heatmap, prefix + name);
+        IOImage.save_image(heatmap, prefix + name);
     }
 }
