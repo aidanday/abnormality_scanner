@@ -7,7 +7,7 @@ class MedianColors {
     public static Color [] find(BufferedImage image_p, int num_expected_p) {
         int height = image_p.getHeight();
         int width = image_p.getWidth();
-        final int threshold = 40;
+        final int threshold = 15;
 
         FrequencyList fl = new FrequencyList();
 
@@ -23,7 +23,7 @@ class MedianColors {
            if (null != array[k]) length++;
        } // end for(k)
        Color [] expected = new Color[length];
-       for(int p = 1 ; p < length ; p++) expected[p] = array[p];
+       for(int p = 0 ; p < length ; p++) expected[p] = array[p];
        return expected;
     }
 }
