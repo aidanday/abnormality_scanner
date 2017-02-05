@@ -19,12 +19,13 @@ class FrequencyList {
         }
 
         public void insert(Color c_p, int threshold_p) {
-            if (threshold_p < (color_diff(c_p, this.c_i) >> 16)) {
+            if (threshold_p < (ColorCompare.color_diff(c_p, this.c_i) >> 16)) {
                 if (null == next_i) {
                     next_i = new Node(c_p, null, this);
-		    return
+                    return;
                 }
-                return next_i.insert(c_p, threshold_p);
+                next_i.insert(c_p, threshold_p);
+                return;
             }
 
             freq_i++;
@@ -40,7 +41,7 @@ class FrequencyList {
 
         private void swap_back() {
             Node other = this.prev_i;
-            assert((null != other);
+            assert(null != other);
 
             Node temp = this.next_i;
             if (null != temp) temp.prev_i = other;
