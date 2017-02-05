@@ -1,5 +1,5 @@
-import java.awk.image.BufferedImage;
-import java.awk.Color;
+import java.awt.image.BufferedImage;
+import java.awt.Color;
 
 package ca.uwaterloo.enghack17.cvision;
 
