@@ -14,7 +14,9 @@ public class MapHeat {
         for(int i = 0 ; i < height ; i++) {
             for(int j = 0 ; j < width ; j++) {
                 Color c = new Color(image_p.getRGB(j,i));
-                heats[j][i] = ColorCompare.color_diff(c, expected_p);
+                int diff = ColorCompare.color_diff(c,expected);
+                Color c = new Color(255 - diff, 255 - diff, 255 - diff);
+		heats[j][i] = c.getRGB();
 	        } // end for(j)
 	    } // end for(i)
         
@@ -27,7 +29,7 @@ public class MapHeat {
 
         int[][] heats = differences(image_p, expected_p);
 
-        BufferedImage heatimg = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+        BufferedImage heatimg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 
         for(int i = 0 ; i < height ; i++) {
             for(int j = 0 ; j < width ; j++) {

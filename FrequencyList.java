@@ -19,7 +19,7 @@ class FrequencyList {
         }
 
         public void insert(Color c_p, int threshold_p) {
-            if (threshold_p < (ColorCompare.color_diff(c_p, this.c_i) >> 16)) {
+            if (threshold_p < ColorCompare.color_diff(c_p, this.c_i)) {
                 if (null == next_i) {
                     next_i = new Node(c_p, null, this);
                     return;
